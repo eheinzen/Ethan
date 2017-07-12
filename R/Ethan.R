@@ -48,7 +48,7 @@ NULL
 
 ## devtools::check_man();
 ## devtools::check()
-## devtools::install("Ethan", dependencies = FALSE)
+## devtools::install(dependencies = FALSE)
 ## < restart R >
 ## library(Ethan)
 ##
