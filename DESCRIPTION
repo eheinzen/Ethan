@@ -9,9 +9,10 @@ Description: This package includes functions coxtable.R, is.nontrivial.vector.R,
 Depends:
     R (>= 3.2.3)
 Imports:
+    ggplot2 (>= 2.1.0)
+Suggests:
     xtable (>= 1.8-0),
     survival (>= 2.39-5),
-    ggplot2 (>= 2.1.0),
     grid (>= 3.2.0),
     gtable (>= 0.2.0)
 License: GPL (>= 2)

@@ -23,7 +23,6 @@
 #' coxtable(model, "Likes Pizza", "Unadjusted Cox Model.", TRUE, 3)
 #' model <- coxph(Surv(time_to_fu, status_fu) ~ likes_pizza + fav_flavor, data = pizza.data)
 #' coxtable(model, c("Likes Pizza", "Pepperoni", "Sausage"), "Adjusted Cox Model.", TRUE, 3)
-#' @import survival
 #' @export
 coxtable <- function(cox.model, rownames, caption.prefix = "", print.xtable = FALSE, digits = 2)
 {
