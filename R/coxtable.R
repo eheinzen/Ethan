@@ -1,7 +1,7 @@
 ###########################################################################################
 ###      Filename: coxtable.R
 ### Creation Date: Tuesday, 28 July 2015 5:00 PM CDT
-### Last Modified: Tuesday, 31 May 2016 01:30 PM CDT
+### Last Modified: Wednesday, 12 July 2017 10:30 AM CDT
 ###########################################################################################
 
 #' coxtable
@@ -30,16 +30,16 @@ coxtable <- function(cox.model, rownames, caption.prefix = "", print.xtable = FA
   if(!missing(rownames) && !is.character(rownames))
   {stop("Parameter rownames not valid: make sure it's a character vector.")}
 
-  nrows <- nrow(coef(summary(cox.model)))
+  nrows <- nrow(stats::coef(summary(cox.model)))
 
   if(nrows == 1)
   {
-    modeltable <- cbind(t(as.matrix(coef(summary(cox.model))[,-2])), t(as.matrix(summary(cox.model)$conf[,-2])))
+    modeltable <- cbind(t(as.matrix(stats::coef(summary(cox.model))[,-2])), t(as.matrix(summary(cox.model)$conf[,-2])))
     # Have to t(as.matrix) because subscripting changes it to a vector
     # and matrix() strips the names off, so that's no good
   } else
   {
-    modeltable <- cbind(coef(summary(cox.model))[,-2], summary(cox.model)$conf[,-2])
+    modeltable <- cbind(stats::coef(summary(cox.model))[,-2], summary(cox.model)$conf[,-2])
   }
 
   colnames(modeltable)[5] <- "HR"

@@ -1,7 +1,7 @@
 ###########################################################################################
 ###      Filename: rowMedians.R
 ### Creation Date: Tuesday, 18 August 2015 11:30 AM CDT
-### Last Modified: Tuesday, 18 August 2015 11:30 AM CDT
+### Last Modified: Wednesday, 12 July 2017 10:30 AM CDT
 ###########################################################################################
 
 #' rowMedians
@@ -18,7 +18,7 @@
 #' @export
 rowMedians <- function (x, na.rm = FALSE)
 {
-  z <- apply(x, 1, median, na.rm = na.rm)
+  z <- apply(x, 1, stats::median, na.rm = na.rm)
   names(z) <- rownames(x)
   return(z)
 }

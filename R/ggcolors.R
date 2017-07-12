@@ -1,7 +1,7 @@
 ###########################################################################################
 ###      Filename: ggcolor.R
 ### Creation Date: Creation Date: Thursday, 03 December 2015 02:30 PM CST
-### Last Modified: Thursday, 11 February 2016 1:00 PM CST (moved it from packages/Ethan/R/)
+### Last Modified: Wednesday, 12 July 2017 10:30 AM CDT
 ###########################################################################################
 
 #' ggcolors
@@ -22,5 +22,5 @@ ggcolors <- function(n)
   if(missing(n)){stop("'n' is missing with no default.")}
   if (!kinda.integer(n)){stop("'n' must be coercible to integer.")}
   n <- as.integer(n)
-  return(hcl(seq(15, 375, length = n + 1), l = 65, c = 100)[1:n])
+  return(grDevices::hcl(seq(15, 375, length = n + 1), l = 65, c = 100)[1:n])
 }

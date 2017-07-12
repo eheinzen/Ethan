@@ -1,7 +1,7 @@
 ###########################################################################################
 ###      Filename: kinda.type.R
 ### Creation Date: Thursday, 19 November 2015 03:30 PM CST
-### Last Modified: Thursday, 19 November 2015 03:30 PM CST
+### Last Modified: Wednesday, 12 July 2017 10:30 AM CDT
 ###########################################################################################
 
 #' Kinda functions
@@ -104,7 +104,7 @@ kinda.data.frame <- function(x)
 kinda.formula <- function(x)
 {
   if(missing(x)){stop("Argument 'x' is missing.")}
-  return(kinda.type(x, as.formula))
+  return(kinda.type(x, stats::as.formula))
 }
 
 #' @rdname kinda
