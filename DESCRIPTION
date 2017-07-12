@@ -1,7 +1,7 @@
 Package: Ethan
 Title: A bunch of functions written by Ethan Heinzen
-Version: 0.4.1
-Date: 2017-01-09
+Version: 1.0.0
+Date: 2017-07-12
 Authors@R: "Ethan Heinzen <heinzen.ethan@mayo.edu> [aut, cre]"
 Description: This package includes functions coxtable.R, is.nontrivial.vector.R, and
     auc.R, rowMedians.R, rowSDs.R, multiplot.R, marginal.boxplot.R, kinda.type.R,
