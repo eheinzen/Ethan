@@ -90,7 +90,7 @@ auc <- function(y, t, data, baseadj = FALSE,
   {
     if(!is.data.frame(data)){stop("Parameter data is not a data.frame.")}
     if(!is.character(y) || length(y) != 1L){stop("Parameter y is not a character, but data is not missing.")}
-    if(y %nin% colnames(data)){stop("Parameter y is a character, but not in the colnames of data.")}
+    if(!(y %in% colnames(data))){stop("Parameter y is a character, but not in the colnames of data.")}
     y <- data[[y]]
     if(!is.numeric(y)){stop("The column in data corresponding to y is not numeric.")}
 
@@ -100,7 +100,7 @@ auc <- function(y, t, data, baseadj = FALSE,
     } else
     {
       if(!is.character(t) || length(t) != 1L){"Parameter t is not a character, but data is not missing."}
-      if(t %nin% colnames(data)){stop("Parameter t is a character, but not in the colnames of data.")}
+      if(!(t %in% colnames(data))){stop("Parameter t is a character, but not in the colnames of data.")}
       t <- data[[t]]
       if(!is.numeric(t)){stop("The column in data corresponding to t is not numeric.")}
     }
@@ -114,7 +114,7 @@ auc <- function(y, t, data, baseadj = FALSE,
   # we'll consider NaN and Inf and -Inf here
   if(!any(is.finite(y))){warning("No finite values in y. Returning NA."); return(NA_real_)}
   if(length(y) != length(t)){stop("Lengths of y and t are not equal.")}
-  validate.logical(baseadj)
+  if(!is.logical(baseadj) || length(baseadj) != 1) stop("'baseadj' should be a logical of length 1.")
   missadj <- match.arg(missadj, several.ok = FALSE)
   onlybase <- match.arg(onlybase, several.ok = FALSE)
   nobase <- match.arg(nobase, several.ok = FALSE)
