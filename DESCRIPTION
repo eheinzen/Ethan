@@ -1,0 +1,19 @@
+Package: Ethan
+Title: A bunch of functions written by Ethan Heinzen
+Version: 0.4.1
+Date: 2017-01-09
+Authors@R: "Ethan Heinzen <heinzen.ethan@mayo.edu> [aut, cre]"
+Description: This package includes functions coxtable.R, is.nontrivial.vector.R, and
+    auc.R, rowMedians.R, rowSDs.R, multiplot.R, marginal.boxplot.R, kinda.type.R,
+    ggcolors.R, oodle.R, declare.affection.R, and data set pizza.data.Rdata.
+Depends:
+    R (>= 3.2.3)
+Imports:
+    xtable (>= 1.8-0),
+    survival (>= 2.39-5),
+    ggplot2 (>= 2.1.0),
+    grid (>= 3.2.0),
+    gtable (>= 0.2.0)
+License: GPL (>= 2)
+LazyData: true
+RoxygenNote: 6.0.1
