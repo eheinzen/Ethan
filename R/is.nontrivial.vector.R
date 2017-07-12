@@ -1,7 +1,7 @@
 ###########################################################################################
 ###      Filename: is.nontrivial.vector.R
 ### Creation Date: Tuesday, 28 July 2015 5:00 PM CDT
-### Last Modified: Monday, 16 November 2015 10:30 AM CST
+### Last Modified: Wednesday, 12 July 2017 10:00 AM CDT
 ###########################################################################################
 
 #' is.nontrivial.vector
@@ -21,5 +21,5 @@ is.nontrivial.vector <- function(x)
   if(missing(x)){stop("Parameter x is missing, with no default.")}
   if(!is.vector(x)){return(FALSE)}
   # otherwise it's a vector!
-  if(length(x) > 1){return(TRUE)} else{return(FALSE)}
+  return(length(x) > 1)
 }
