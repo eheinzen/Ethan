@@ -18,23 +18,6 @@
 #' @export
 rowSDs <- function (x, na.rm = FALSE)
 {
-  if (is.data.frame(x))
-  {
-    x <- as.matrix(x)
-  }
-  if (!is.matrix(x))
-  {
-    stop("Parameter 'x' must be a matrix or data frame.")
-  }
-  if (!(is.numeric(x) || is.integer(x) || is.logical(x)))
-  {
-    stop("Parameter 'x' must be numeric, integer, or logical.")
-  }
-  if(!is.logical(na.rm))
-  {
-    stop("Parameter 'na.rm' must be logical.")
-  }
-
   z <- apply(x, 1, sd, na.rm = na.rm)
   names(z) <- rownames(x)
   return(z)
