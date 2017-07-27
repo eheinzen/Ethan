@@ -1,6 +1,6 @@
 # Ethan 1.0.0
 
-* Started with Ethan v0.4.1; removed all local filepath references; moved to version control on github
+* Started with Ethan v0.4.1; removed all local filepath references; moved to version control on github (note: on 7/27/2017 this repo changed owners)
 
 * Updated `auc()`, `is.nontrivial.vector()`, `rowMedians()`, and `rowSDs()`.
 
